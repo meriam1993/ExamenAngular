@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "titre": "T-shirt 1",
+      "description": "blaa blal blalaaa",
+      "image": "https://www.google.com/search?q=tshirt&oq=tshirt&aqs=chrome..69i57j0i512j0i10i512j0i512j0i10i512j0i512j0i20i263i512j0i512j0i10i512j0i512.1292j0j7&sourceid=chrome&ie=UTF-8#imgrc=gQ7d3_OwKmWEBM&imgdii=-BF61XvQEADoFM",
+      "publique": true
+    },
+    {
+      "titre": "Nassreddine",
+      "description": "hhhhhh",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blankclothing.com.au%2Fecho-plain-jersey-cotton-tshirt-crew-neck%2F&psig=AOvVaw2Fb1tgN1Il_jL8jLZdavqQ&ust=1680734732305000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCKDq_femkf4CFQAAAAAdAAAAABAE",
+      "publique": true,
+      "id": 2
+    },
+    {
+      "titre": "Testeur",
+      "description": "hhhhhhhhhhhhhhhhhhhhh",
+      "image": "https://www.shutterstock.com/image-photo/mens-white-blank-tshirt-template-two-1408369454",
+      "publique": false,
+      "id": 3
+    },
+    {
+      "titre": "Professeur",
+      "description": "none",
+      "image": "https://www.shutterstock.com/image-photo/mens-white-blank-tshirt-template-two-1408369454",
+      "publique": false,
+      "id": 4
+    }
+  ]
+}

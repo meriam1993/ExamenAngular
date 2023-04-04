@@ -1,0 +1,53 @@
+
+<form #f="ngForm">
+  <div class="form-group col-md-4">
+    <label>Article titre:*</label>
+    <input type="text" name="pName" [(ngModel)]="article.titre"
+    class="form-control" required minlength="3" pattern="[a-zA-Z ]+$" #pn="ngModel" required>
+  </div>
+
+  <div class="alert alert-danger col-md-4" *ngIf="pn.invalid && pn.touched">
+    <div *ngIf="pn.hasError('required')"> this field is required</div>
+  </div>
+
+<div class="form-group col-md-4">
+  <label>Description:*</label>
+  <input type="text" name="description" [(ngModel)]="article.description" pattern="[a-zA-Z0-9]+$" required
+  class="form-control" #pn1="ngModel">
+</div>
+
+<div class="alert alert-danger col-md-4" *ngIf="pn1.invalid && pn1.touched">
+  <div *ngIf="pn1.hasError('required')"> this field is required</div>
+  <div *ngIf="pn1.hasError('pattern')"> Please fill in only caracters and numbers</div>
+</div>
+
+<br>
+
+<div class="form-group col-md-4">
+  <label>Image :*</label>
+  <input type="text" name="image"
+  class="form-control" [(ngModel)]="article.image" required   #pn2="ngModel">
+</div>
+<div class="alert alert-danger col-md-4" *ngIf="pn2.invalid && pn2.touched">
+  <div *ngIf="pn2.hasError('required')"> this field is required</div>
+</div>
+
+<div class="form-group col-md-4">
+  <label>  Publique :* </label>
+  <select name="aPublique" class="form-control" [(ngModel)]="article.publique" required #pn4="ngModel"  #pn3="ngModel">
+    <option [ngValue]="true" >Publique</option>
+    <option [ngValue]="false">Non Publique</option>
+  </select>
+</div>
+
+<div class="alert alert-danger col-md-4" *ngIf="pn3.invalid && pn3.touched">
+  <div *ngIf="pn3.hasError('required')"> this field is required</div>
+</div>
+<br>
+<button class="btn btn-danger" (click)="saveArticle()" [disabled]="f.invalid"> {{action}} </button>
+&nbsp;
+<button class="btn btn-warning">
+  reset
+</button>
+</form>
+

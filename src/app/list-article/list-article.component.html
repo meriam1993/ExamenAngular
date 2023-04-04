@@ -1,0 +1,30 @@
+<form class="col-md-3" >
+  <input class="form-control me-2" type="search" placeholder="Search..." name="Search" [(ngModel)]="motcle" >
+</form>
+<br>
+
+<div class="row">
+  <div *ngFor="let article of list" class="col-md-3">
+    <div class="card" style="width: 18rem;" *ngIf="article.titre.includes(motcle) || motcle==null">
+      <img src="{{article.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{article.titre}}</h5>
+        <p class="card-text">
+         description: {{article.description}}
+        </p>
+        <p class="card-text">
+          publique: {{article.publique}}
+         </p>
+
+
+        <button class="btn btn-sm btn-danger"
+        (click)="deleteArticle(article)" *ngIf="article.publique==false">
+          Delete
+        </button>
+        <a [routerLink]="['/update',article.id]" class="btn btn-sm btn-primary">
+          update
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
